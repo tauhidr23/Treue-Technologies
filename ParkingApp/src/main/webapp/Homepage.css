@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500,600&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;  
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;	
+}
+.main{
+	position: relative;
+	height: 100vh;
+}
+.main::before {    
+      content: "";
+      background-image: url('https://www.parkpca.com/wp-content/uploads/2018/08/Cars-parked-in-parking-lot.jpg');
+      background-size: cover;
+      position: absolute;
+      inset: 0;
+      opacity: 0.75;
+      z-index: -1;
+}
+
+.header, .nav {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  justify-content: space-between;
+  background-color: grey;
+   margin: 0 auto;
+}
+
+.nav {
+	margin-inline: 1.2rem;
+}
+
+.heading {
+  overflow: hidden;
+  color:white;
+}
+
+li {
+  list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.nav li {
+  margin-inline: 0.6rem;
+}
+
+.nav li a {
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav li a:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+.nav li:last-child a {
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  transition: 200ms ease-in-out;
+  padding: 8px 16px 7px;
+}
+
+.nav li:last-child a:hover {
+  background: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+@media all and (min-width: 1030px) {
+  .header {
+	padding-inline: 2rem;
+    min-width: 768px;
+  }
+}
+
+.container{
+	margin-inline: 2rem;
+}
+.action{
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+	gap: 1.2rem;
+}
+.action>a{
+	min-width: 200px;
+	height: 200px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    text-align: center;
+	padding: 20px;
+	border-radius: 8px;
+	flex: 1;
+	color: #fff;
+	font-size: 18px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-inline: 2rem;
+}
+
+.feature {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.2);
+}
+
+.feature i {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}

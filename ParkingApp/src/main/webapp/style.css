@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #677eff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+section .container {
+  position: relative;
+  width: 800px;
+  min-width: 320px;
+  min-height: 320px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+}
+section .signup{
+	height: 700px;
+}
+section .container .forms {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  padding: 0;
+  transition: 300ms;
+}
+
+.signup{
+  height:inherit;
+}
+.img {
+  position: relative;
+  width: 50%;
+}
+
+.img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 16px;
+}
+
+.forms .signinBox {
+  position: absolute;
+  left: 0;
+  height: inherit;
+}
+.forms .signupBox {
+  position: absolute;
+  left: 0;
+  height: inherit;
+}
+
+.forms .user .form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  right: 0;
+  padding: 40px;
+  transition: 300ms;
+}
+.form form{
+	height: inherit;
+}
+.form form h2 {
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.form form label{
+	font-size: 14px;
+	font-weight: 400;
+}
+.form form input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background: #f5f5f5;
+  color: #333;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.form form .gender-container{
+	display: flex;
+}
+.form form .gender-container input{
+	padding-right: 5px;
+}
+.form button {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 8px 0;
+
+  max-width: 100px;
+  background: #677eff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.form form .signup {
+  position: relative;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.form form .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
+
+.form form .forgot{
+	font-weight: 400;
+    text-decoration: none;
+    font-size: 12px;
+    margin-inline-start: 6.8rem;
+}
+.alert {
+  padding: 20px;
+  color: white;
+  opacity: 0.2;
+  position: fixed;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  section .container {
+    max-width: 400px;
+  }
+
+  section .container .img {
+    display: none;
+  }
+
+  section .container .forms {
+    width: 100%;
+    left: 0;
+  }
+}

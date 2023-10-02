@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirrors Parking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section>
+    <div class="container signup">
+      <div class="img">
+        <img
+			src="https://www.geotab.com/CMS-Media-production/Blog/NA/_2020/Aug/reverse-parking/blog-why-reverse-parking-hero.jpg"          
+			alt="parking photo" />
+      </div>
+      <div class="forms">
+        <div class="user signupBox">
+          <div class="form">
+            <form action="register" method="">
+              <h2>Create an account</h2>
+              <input type="text" name="username" placeholder="Username" required/>
+              <input type="email" name="email" placeholder="Email Address" required/>
+      		  <label for="dob">Date of Birth:</label>
+      		  <input type="date" id="dob" name="dob" required>
+      			<label>Gender:</label>
+      			<div class="gender-container">
+        			<input type="radio" id="male" name="gender" value="male" required>
+        			<label for="male">Male</label>
+        			<input type="radio" id="female" name="gender" value="female" required>
+        			<label for="female">Female</label>
+        			<input type="radio" id="other" name="gender" value="other" required>
+        			<label for="other">Other</label>
+      			</div>
+  			  <input type="text" id="license" name="license" placeholder="License Number" required>
+
+      		  <input type="tel" id="mobile" name="mobile" placeholder="Mobile number" required>
+              <input type="password" name="password" placeholder="Create Password" required/>
+              <input type="password" name="confirmPassword" placeholder="Confirm Password" required/>
+              <button type="submit" name="">Sign Up</button>
+              <p class="signup">
+                Already have an account ?
+                <a href="login.html">Sign in.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+</body>
+    <script>
+        function validateForm() {
+            var dob = document.getElementById("dob").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var email = document.getElementById("email").value;
+
+            // Check if the date of birth year is less than 2005
+            var dobYear = parseInt(dob.substr(0, 4));
+            var currentYear = new Date().getFullYear();
+            if (dobYear >= 2005) {
+                alert("Date of birth year should be less than 2005.");
+                return false;
+            }
+
+            // Check if password and confirm password match
+            if (password !== confirmPassword) {
+                alert("Passwords should match.");
+                return false;
+            }
+
+            // Check if email is in a proper format
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // If all checks pass, allow the form to be submitted
+            return true;
+        }
+    </script>
+</body>
+
+</html>
